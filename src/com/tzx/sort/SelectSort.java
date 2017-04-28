@@ -18,8 +18,8 @@ import com.tzx.utils.Util;
  */
 public class SelectSort implements Sort {
     @Override
-    public int[] sort(int[] a) {
-        if (a == null || a.length <= 1) return a;
+    public void sort(int[] a) {
+        if (a == null || a.length <= 1) return ;
         int i, j, mMinIndex;
         int n = a.length;
         for (i = 0; i < n; i++) {
@@ -33,6 +33,5 @@ public class SelectSort implements Sort {
                 Util.swap(a, i, mMinIndex);
             }
         }
-        return a;
     }
 }

@@ -25,4 +25,8 @@ public class Util {
     public static void print(String s) {
         System.out.print(s);
     }
+
+    public static void println(int num) {
+        System.out.println(num);
+    }
 }

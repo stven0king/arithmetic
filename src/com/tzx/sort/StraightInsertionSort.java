@@ -17,7 +17,7 @@ package com.tzx.sort;
  */
 public class StraightInsertionSort implements Sort {
     @Override
-    public int[] sort(int[] a) {
+    public void sort(int[] a) {
         int i,j,k;
         int n = a.length;
         for (i = 1; i < n; i++) {
@@ -36,6 +36,5 @@ public class StraightInsertionSort implements Sort {
                 a[k + 1] = temp;
             }
         }
-        return a;
     }
 }

@@ -10,8 +10,8 @@ package com.tzx.sort;
  */
 public class BinaryInsertSort implements Sort {
     @Override
-    public int[] sort(int[] a) {
-        if (a == null || a.length <= 1) return a;
+    public void sort(int[] a) {
+        if (a == null || a.length <= 1) return;
         int temp, left, right, middle;
         for (int i = 1, size = a.length; i < size; i++) {
             temp = a[i];
@@ -34,6 +34,5 @@ public class BinaryInsertSort implements Sort {
                 a[j + 1] = a[j];
             }
         }
-        return a;
     }
 }

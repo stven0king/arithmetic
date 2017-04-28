@@ -15,8 +15,8 @@ package com.tzx.sort;
  */
 public class BubbleSort implements Sort {
     @Override
-    public int[] sort(int[] a) {
-        if (a == null || a.length <= 1) return a;
+    public void sort(int[] a) {
+        if (a == null || a.length <= 1) return ;
         int i,j;
         int n = a.length;
         for (i = 0; i < n - 1; i++) {
@@ -28,17 +28,15 @@ public class BubbleSort implements Sort {
                 }
             }
         }
-        return a;
     }
 
     /**
      * 改进方法：设置一个标志，如果这一趟发生了交换，则为true，否则为false。
      * 明显如果有一趟没有发生交换，说明排序已经完成。
      * @param a
-     * @return
      */
-    public int[] sortOpt(int[] a) {
-        if (a == null || a.length <= 1) return a;
+    public void sortOpt(int[] a) {
+        if (a == null || a.length <= 1) return ;
         int i,j;
         int n = a.length;
         boolean swapChanged = true;
@@ -53,6 +51,5 @@ public class BubbleSort implements Sort {
                 }
             }
         }
-        return a;
     }
 }

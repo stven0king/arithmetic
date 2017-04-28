@@ -13,9 +13,11 @@ import com.tzx.utils.Util;
  *      Shell提出取gap=|n/2|,gap=|gap/2|,直到gap=1.
  *      事实上，gap每次缩小3倍的效果要更好些。
  */
-public class ShellSort implements Sort {
+public class ShellSort implements Sort{
+
     @Override
-    public int[] sort(int[] a) {
+    public void sort(int[] a) {
+        if (a == null || a.length <= 1) return;
         int i, j, gap;
         int n = a.length;
         //计算步长
@@ -36,6 +38,5 @@ public class ShellSort implements Sort {
             }
             Util.println(a);
         }
-        return a;
     }
 }
